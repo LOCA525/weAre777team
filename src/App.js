@@ -8,9 +8,10 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           hihihiihifffhi <code>src/App.js</code> and save to reload.
-          <div className="지훈">안녕하세요</div>
+          <div className="지훈">dfjlajfekljf</div>
           <div className="정환">34</div>
           <div className="도영">56</div>
+          <div className="준영">hihi</div>
         </p>
         <a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
           Learn React
