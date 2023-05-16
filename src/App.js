@@ -8,7 +8,7 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           hihihiihifffhi <code>src/App.js</code> and save to reload.
-          <div className="지훈">안녕하세요</div>
+          <div className="지훈">12345asdfdsafsdafdsafsadasdf</div>
           <div className="정환">34</div>
           <div className="도영">56</div>
         </p>
