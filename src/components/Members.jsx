@@ -36,10 +36,16 @@ const TitleContainer = styled.div`
 `;
 
 const MembersContainer = styled.div`
+  cursor: pointer;
+  width: 100%;
   display: flex;
   border: #d0b134 groove;
   border-radius: 0 20px 20px 20px;
   height: 100%;
   padding: 20px;
+  :hover {
+    background-color: #ff7f00;
+    transition: 0.6s;
+  }
 `;
 export default Members;
