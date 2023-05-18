@@ -14,7 +14,7 @@
 - **URL**: `/data`
 - **Method**: `GET`
 - **Description**: 몽고DB에서 모든 사람의 정보를 가져옵니다.
-- **Response**: JSON 형식으로 모든 사람의 정보를 반환합니다. 예시:
+- **Response**: JSON 형식으로 모든 사람의 정보를 반환합니다.
 
 ```json
 {
