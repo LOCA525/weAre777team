@@ -14,9 +14,6 @@ function Card() {
 }
 
 const CardContainer = styled.div`
-  @media screen and (max-width: 980px) {
-    display: none;
-  }
   display: flex;
   flex-direction: column;
   padding: 30px;
