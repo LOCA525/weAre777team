@@ -1,17 +1,16 @@
 import { styled } from "styled-components";
 import Card from "./Card";
 
-function Members() {
+function Members({ teamData }) {
   return (
     <div>
       <TitleContainer>
         <h2>Members</h2>
       </TitleContainer>
       <MembersContainer>
-        <Card />
-        <Card />
-        <Card />
-        <Card />
+        {teamData.map((item) => {
+          return <Card item={item} />;
+        })}
       </MembersContainer>
     </div>
   );

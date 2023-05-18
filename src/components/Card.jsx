@@ -1,14 +1,14 @@
 import { styled } from "styled-components";
-import jyCharacter from "../images/jycharacter.png";
-function Card() {
+function Card({ item }) {
+  console.log(item);
   return (
     <CardContainer>
       <CharacterContainer>
-        <img src={jyCharacter} alt="jy" width={"90%"} />
+        <img src={item.url} alt="jy" width={"90%"} />
       </CharacterContainer>
-      <Mbti>ENFP</Mbti>
-      <Stack>FrontEnd</Stack>
-      <Name>박준영</Name>
+      <Mbti>{item.major}</Mbti>
+      <Stack>{item.mbti}</Stack>
+      <Name>{item.name}</Name>
     </CardContainer>
   );
 }
