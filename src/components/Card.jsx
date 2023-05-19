@@ -25,6 +25,7 @@ const CardContainer = styled.div`
   padding: 30px;
   border-radius: 10px;
   width: 24%;
+  cursor: pointer;
 
   margin-right: 20px;
   max-height: 450px;

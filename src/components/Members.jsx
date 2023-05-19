@@ -35,7 +35,6 @@ const TitleContainer = styled.div`
 `;
 
 const MembersContainer = styled.div`
-  cursor: pointer;
   width: 100%;
   display: flex;
   border: #d0b134 groove;
