@@ -5,9 +5,15 @@ import Members from "./components/Members";
 import Title from "./components/Title";
 import { styled } from "styled-components";
 import axios from "axios";
+import Modal from "./components/Modal";
 
 function App() {
   const [teamData, setTeamData] = useState([]);
+  const [isOpen, setIsOpen] = useState(false);
+
+  const openModalHandler = () => {
+    setIsOpen(!isOpen);
+  };
 
   useEffect(() => {
     axios
@@ -23,9 +29,10 @@ function App() {
   return (
     <GlobalContainer>
       <AppContainer>
+        <Modal openModalHandler={openModalHandler} setIsOpen={setIsOpen} isOpen={isOpen} />
         <Title />
         <Banner />
-        <Members teamData={teamData} />
+        <Members teamData={teamData} setIsOpen={setIsOpen} isOpen={isOpen} />
       </AppContainer>
     </GlobalContainer>
   );

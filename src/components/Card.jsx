@@ -1,11 +1,17 @@
+import { useRecoilState, useRecoilValue } from "recoil";
 import { styled } from "styled-components";
-function Card({ item }) {
-  console.log(item);
+import { modalMemberData } from "../store/modalMemberData";
+
+function Card({ item, setIsOpen, isOpen }) {
+  const [, setMemberDdata] = useRecoilState(modalMemberData);
+  const cardClick = () => {
+    setIsOpen(!isOpen);
+    setMemberDdata(item);
+    // 클릭한 사람 상태값 recoil 저장.
+  };
   return (
-    <CardContainer>
-      <CharacterContainer>
-        <img src={item.url} alt="jy" width={"90%"} />
-      </CharacterContainer>
+    <CardContainer onClick={cardClick}>
+      <CharacterContainer character={item.url}></CharacterContainer>
       <Mbti>{item.major}</Mbti>
       <Stack>{item.mbti}</Stack>
       <Name>{item.name}</Name>
@@ -26,9 +32,11 @@ const CardContainer = styled.div`
 `;
 
 const CharacterContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  width: 100%;
+  height: 330px;
+  background-image: url(${(props) => props.character});
+  background-size: cover;
+  background-repeat: no-repeat;
 `;
 
 const Mbti = styled.div`

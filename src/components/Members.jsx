@@ -1,7 +1,7 @@
 import { styled } from "styled-components";
 import Card from "./Card";
 
-function Members({ teamData }) {
+function Members({ teamData, setIsOpen, isOpen }) {
   return (
     <div>
       <TitleContainer>
@@ -9,7 +9,7 @@ function Members({ teamData }) {
       </TitleContainer>
       <MembersContainer>
         {teamData.map((item) => {
-          return <Card item={item} />;
+          return <Card item={item} key={item.num} setIsOpen={setIsOpen} isOpen={isOpen} />;
         })}
       </MembersContainer>
     </div>
