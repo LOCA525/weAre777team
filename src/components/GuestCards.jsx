@@ -61,6 +61,7 @@ function GuestCards({ item, getCommentApi }) {
 }
 
 const GuestCard = styled.div`
+  width: 98%;
   height: 130px;
   border-radius: 10px;
   border: #ff7f00 solid;

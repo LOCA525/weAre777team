@@ -154,7 +154,6 @@ const UoloadBtn = styled.button`
 `;
 
 const UserInfoFormForm = styled.div`
-  width: 100%;
   display: flex;
 `;
 
