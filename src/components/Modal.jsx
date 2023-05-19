@@ -1,9 +1,19 @@
 import { useRecoilValue } from "recoil";
 import styled from "styled-components";
 import { modalMemberData } from "../store/modalMemberData";
+import { useEffect } from "react";
 
 const Modal = ({ openModalHandler, isOpen }) => {
   const memberData = useRecoilValue(modalMemberData);
+  useEffect(() => {
+    if (isOpen === true) {
+      document.body.style.overflow = "hidden";
+    } else if (isOpen === false) {
+      document.body.style.overflow = "unset";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+  });
   return (
     <>
       <ModalContainer>
@@ -67,13 +77,13 @@ const ModalBtn = styled.button`
 const BtnContainer = styled.div`
   position: relative;
   :hover {
-    background-color: red;
-    transition: 0.5s;
+    opacity: 50%;
+    transition: 0.3s;
   }
 `;
 
 const ExitBtn = styled(ModalBtn)`
-  background-color: #ff7f00;
+  background-color: red;
   border-radius: 10px;
   text-decoration: none;
   padding: 5px 10px;
