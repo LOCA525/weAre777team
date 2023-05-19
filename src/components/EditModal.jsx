@@ -27,7 +27,7 @@ function EditModal({ isOpen, openModalHandler, getCommentApi }) {
       commentBody.append("password_give", editpassword);
       commentBody.append("comment_give", editComment);
       axios
-        .post("http://myweb.eba-63ucvpdw.ap-northeast-2.elasticbeanstalk.com/comment/edit", commentBody)
+        .post("https://team.weare777team.store/comment/edit", commentBody)
         .then((data) => {
           alert(`${data.data.msg}`);
           setEditComment("");

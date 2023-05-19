@@ -18,7 +18,7 @@ function App() {
 
   useEffect(() => {
     axios
-      .get("http://myweb.eba-63ucvpdw.ap-northeast-2.elasticbeanstalk.com/data")
+      .get("https://team.weare777team.store/data")
       .then((data) => {
         console.log("data", data.data.result);
         setTeamData(data.data.result);

@@ -24,7 +24,7 @@ function DeleteModal({ deleteOpen, openDeleteHandler, getCommentApi }) {
     commentBody.append("id_give", deleteId);
     commentBody.append("password_give", deletePassword);
     axios
-      .post("http://myweb.eba-63ucvpdw.ap-northeast-2.elasticbeanstalk.com/comment/delete", commentBody)
+      .post("https://team.weare777team.store/comment/delete", commentBody)
       .then((data) => {
         alert(`${data.data.msg}`);
         setDeletePassword("");

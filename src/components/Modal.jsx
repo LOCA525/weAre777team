@@ -106,6 +106,7 @@ const ModalView = styled.div.attrs((props) => ({
   border-radius: 20px;
   width: 800px;
   height: 500px;
+  overflow: wrap;
 
   background-color: #ff7f00;
   > div.desc {

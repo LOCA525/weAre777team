@@ -11,7 +11,7 @@ function GuestBook() {
 
   const getCommentApi = () => {
     axios
-      .get("http://myweb.eba-63ucvpdw.ap-northeast-2.elasticbeanstalk.com/comment/get")
+      .get("https://team.weare777team.store/comment/get")
       .then((data) => {
         setGetComment(JSON.parse(data.data.result));
       })
@@ -27,7 +27,7 @@ function GuestBook() {
       commentBody.append("password_give", commentpassword);
       commentBody.append("comment_give", commentContent);
       axios
-        .post("http://myweb.eba-63ucvpdw.ap-northeast-2.elasticbeanstalk.com/comment/save", commentBody)
+        .post("https://team.weare777team.store/comment/save", commentBody)
         .then((data) => {
           console.log("data", data);
           alert("방명록이 등록되었습니다.");
