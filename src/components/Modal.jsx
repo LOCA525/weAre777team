@@ -14,6 +14,9 @@ const Modal = ({ openModalHandler, isOpen }) => {
       document.body.style.overflow = "unset";
     }
   });
+  const handleOpenNewTab = (url) => {
+    window.open(url, "_blank", "noopener, noreferrer");
+  };
   return (
     <>
       <ModalContainer>
@@ -32,7 +35,10 @@ const Modal = ({ openModalHandler, isOpen }) => {
               </BtnContainer>
               <ContentContainer>
                 <PictureContainer picture={memberData.url2} />
-                <IntroduceContainer>{memberData.content}</IntroduceContainer>
+                <IntroduceContainer>
+                  {memberData.content}
+                  <button onClick={() => handleOpenNewTab(memberData.content2)}>블로그 가기</button>{" "}
+                </IntroduceContainer>
               </ContentContainer>
             </ModalView>
           </ModalBackdrop>
@@ -124,13 +130,14 @@ const PictureContainer = styled.div`
   width: 500px;
   height: 500px;
   border-radius: 10px;
-  border: #f1af14 dotted;
   background-image: url(${(props) => props.picture});
   background-size: cover;
   background-repeat: no-repeat;
 `;
 
 const IntroduceContainer = styled.div`
+  display: flex;
+  flex-direction: column;
   border: #ffff solid;
   background-color: #ffff;
   border-radius: 10px;
@@ -142,6 +149,16 @@ const IntroduceContainer = styled.div`
   width: calc(100% - 500px);
   font-size: 25px;
   font-weight: 900;
+  > button {
+    background-color: #ff7f00;
+    margin-top: 30px;
+    height: 40px;
+    font-weight: 900;
+    border: #ff7f00 solid;
+    color: #ffff;
+    border-radius: 5px;
+    cursor: pointer;
+  }
 `;
 
 export default Modal;

@@ -20,8 +20,8 @@ function App() {
     axios
       .get("https://team.weare777team.store/data")
       .then((data) => {
-        console.log("data", data.data.result);
         setTeamData(data.data.result);
+        console.log(data.data.result);
       })
       .catch(() => {
         console.log("실패");
